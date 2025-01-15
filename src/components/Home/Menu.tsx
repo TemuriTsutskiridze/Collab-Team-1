@@ -1,12 +1,12 @@
 export default function Menu(){
     const menuItems = ["Home","Contact","About","Sign-up"];
     return (
-        <div className="font-poppins">
+        <div className="font-poppins flex justify-around items-center w-[100%] mt-[88px]">
             <div>
                 <h1 className="font-inter font-bold text-[24px] tracking-[0.03em]">Exclusive</h1>
             </div>
-            <div>
-                <ul>
+            <div className="w-[50%]">
+                <ul className="flex justify-around">
                 {
                     menuItems.map((menuItem) => <li className="font-normal text-[16px]">{menuItem}</li>)
                 }
