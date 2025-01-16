@@ -25,6 +25,7 @@ export default function Home() {
             </div>
           })}
         </ul>
+        <div className="w-[0.5px] h-[442px] bg-[#000000] hidden md:block"></div>
         <div>
           <img src="src/assets/Frame-560.svg"></img>
         </div>
