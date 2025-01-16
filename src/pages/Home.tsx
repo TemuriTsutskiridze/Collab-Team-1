@@ -12,17 +12,21 @@ export default function Home() {
   return (
     <>
       <Menu />
-      <div className="flex justify-around  items-center w-[90%] h-[344px] mt-[50px]">
+      <div className="flex justify-center flex-col items-center md:flex-row w-[90%] md:justify-around  h-[344px] mt-[50px]">
         <ul className="flex flex-col justify-between h-[100%]">
-          {ListItems.map((ListItem)=>{
-            return <div>
+          {ListItems.map((ListItem,index)=>{
+            return <div className="w-[217px] flex justify-between items-center">
               <li>{ListItem}</li>
-              <div></div>
+              <div>
+                {
+                  index < 2 && <img src="src/assets/Arrow.svg"></img>
+                }
+              </div>
             </div>
           })}
         </ul>
         <div>
-          <img src="src/assets/Frame 560.svg"></img>
+          <img src="src/assets/Frame-560.svg"></img>
         </div>
       </div>
     </>
