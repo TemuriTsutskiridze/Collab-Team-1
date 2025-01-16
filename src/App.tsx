@@ -1,13 +1,13 @@
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import MainHeader from "./components/MainHeader";
+import MainHeaderLayout from "./layouts/MainHeaderLayout";
 import GlobalStyles from "./components/GlobalStyles";
+import FooterLayout from "./layouts/FooterLayout";
 
 function App() {
   return (
     <>
       <GlobalStyles />
-      <MainHeader />
+      <MainHeaderLayout />
+      <FooterLayout />
     </>
   );
 }

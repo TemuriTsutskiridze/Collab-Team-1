@@ -5,10 +5,10 @@ import {
   MainHeaderContainer,
   SaleInfo,
   ShopNow,
-} from "./MainHeaderStyles";
+} from "../components/MainHeaderLayoutStyles";
 import Arrow from "/drop-down.png";
 
-const MainHeader: React.FC = () => {
+const MainHeaderLayout: React.FC = () => {
   return (
     <>
       <MainHeaderContainer>
@@ -25,4 +25,4 @@ const MainHeader: React.FC = () => {
   );
 };
 
-export default MainHeader;
+export default MainHeaderLayout;
