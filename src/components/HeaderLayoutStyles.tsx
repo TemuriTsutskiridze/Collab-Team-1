@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const UpperPart = styled.div`
   display: flex;
+  justify-content: space-between;
   width: 100%;
   height: 4.8rem;
   padding: 1.2rem 13.6rem 1.2rem 44.5rem;
@@ -18,7 +19,6 @@ export const SaleInfo = styled.span`
 export const LanguageContainer = styled.div`
   display: flex;
   align-items: center;
-  margin-left: 23.1rem;
 `;
 
 export const ShopNow = styled.span`

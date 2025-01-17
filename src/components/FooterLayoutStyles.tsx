@@ -8,6 +8,7 @@ export const FooterContainer = styled.div`
   height: 44rem;
   padding: 8rem 0 2.4rem;
   background-color: #000000;
+  margin-top: 14rem;
 `;
 
 export const FooterInnerContainer = styled.div`
