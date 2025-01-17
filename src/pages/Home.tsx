@@ -30,6 +30,14 @@ export default function Home() {
           <img src="src/assets/Frame-560.svg"></img>
         </div>
       </div>
+      <div className="mt-[50px]">
+          <div>
+            <h1 className="font-bold font-inter text-[36px]">Flash Sales</h1>
+            <div>
+              
+            </div>
+          </div>
+      </div>
     </>
   );
 }
