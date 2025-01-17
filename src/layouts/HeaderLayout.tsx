@@ -5,6 +5,13 @@ import {
   UpperPart,
   SaleInfo,
   ShopNow,
+  Title,
+  MenuElement,
+  SearchContainer,
+  SearchInput,
+  DownPart,
+  Menu,
+  Line,
 } from "../components/HeaderLayoutStyles";
 import Arrow from "/drop-down.png";
 import Search from "/search.png";
@@ -22,20 +29,20 @@ const HeaderLayout: React.FC = () => {
           <img src={Arrow} alt="Arrow" />
         </LanguageContainer>
       </UpperPart>
-      <div>
-        <h3>Exclusive</h3>
-        <section>
-          <a>Home</a>
-          <a>Contact</a>
-          <a>About</a>
-          <a>Sign Up</a>
-          <div>
-            <input type="text" />
-            <img src={Search} alt="Search" />
-          </div>
-        </section>
-        <div></div>
-      </div>
+      <DownPart>
+        <Title>Exclusive</Title>
+        <Menu>
+          <MenuElement>Home</MenuElement>
+          <MenuElement>Contact</MenuElement>
+          <MenuElement>About</MenuElement>
+          <MenuElement>Sign Up</MenuElement>
+        </Menu>
+        <SearchContainer>
+          <SearchInput type="text" placeholder="What are you looking for?" />
+          <img src={Search} alt="Search" />
+        </SearchContainer>
+      </DownPart>
+      <Line></Line>
     </>
   );
 };
