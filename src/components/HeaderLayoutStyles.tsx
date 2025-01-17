@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MainHeaderContainer = styled.div`
+export const UpperPart = styled.div`
   display: flex;
   width: 100%;
   height: 4.8rem;
