@@ -47,7 +47,7 @@ export default function Menu() {
               className="w-[16px] h-[16px]"
             ></img>
           </div>
-          <div className="flex gap-[10px] w-[20px] h-[20px]">
+          <div className="flex gap-[10px]">
             <img src="src/assets/Vector.svg"></img>
             <img src="src/assets/Cart1.svg"></img>
           </div>
