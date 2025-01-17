@@ -6,62 +6,78 @@ import Facebook from "/facebook.png";
 import Twitter from "/twitter.png";
 import Instagram from "/instagram.png";
 import Linkedin from "/linkedin.png";
+import {
+  FooterContainer,
+  SubTitle,
+  Title,
+  Section,
+  ImagesContainer,
+  SubImagesContainer,
+  SocialINetworkImagesContainer,
+  Image,
+} from "../components/FooterLayoutStyles";
 
 const FooterLayout: React.FC = () => {
   return (
     <>
-      <div>
+      <FooterContainer>
         <div>
-          <h6>Exclusive</h6>
-          <section>
-            <p>Subscribe</p>
-          </section>
+          <Title>Exclusive</Title>
+          <Section>
+            <SubTitle style={{ fontSize: "2rem" }}>Subscribe</SubTitle>
+          </Section>
         </div>
         <div>
-          <h6>Support</h6>
-          <section>
-            <p>111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</p>
-            <p>exclusive@gmail.com</p>
-            <p>+88015-88888-9999</p>
-          </section>
+          <Title>Support</Title>
+          <Section>
+            <SubTitle>111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</SubTitle>
+            <SubTitle>exclusive@gmail.com</SubTitle>
+            <SubTitle>+88015-88888-9999</SubTitle>
+          </Section>
         </div>
         <div>
-          <h6>Account</h6>
-          <section>
-            <p>My Account</p>
-            <p>Login / Register</p>
-            <p>Cart</p>
-            <p>Wishlist</p>
-            <p>Shop</p>
-          </section>
+          <Title>Account</Title>
+          <Section>
+            <SubTitle>My Account</SubTitle>
+            <SubTitle>Login / Register</SubTitle>
+            <SubTitle>Cart</SubTitle>
+            <SubTitle>Wishlist</SubTitle>
+            <SubTitle>Shop</SubTitle>
+          </Section>
         </div>
         <div>
-          <h6>Quick Link</h6>
-          <section>
-            <p>Privacy Policy</p>
-            <p>Terms Of Use</p>
-            <p>FAQ</p>
-            <p>Contact</p>
-          </section>
+          <Title>Quick Link</Title>
+          <Section>
+            <SubTitle>Privacy Policy</SubTitle>
+            <SubTitle>Terms Of Use</SubTitle>
+            <SubTitle>FAQ</SubTitle>
+            <SubTitle>Contact</SubTitle>
+          </Section>
         </div>
         <div>
-          <h6>Download App</h6>
-          <p>Save $3 with App New User Only</p>
-          <div>
-            <img src={QRCode} alt="QR code" />
-            <div>
-              <img src={GooglePlay} alt="QR code" />
-              <img src={Appstore} alt="QR code" />
-            </div>
-          </div>
-          <section>
-            <img src={Facebook} alt="Fcebook" />
-            <img src={Twitter} alt="Twitter" />
-            <img src={Instagram} alt="Instagram" />
-            <img src={Linkedin} alt="Linkedin" />
-          </section>
+          <Title>Download App</Title>
+          <Section>
+            <SubTitle style={{ fontSize: "1.2rem" }}>
+              {" "}
+              Save $3 with App New User Only
+            </SubTitle>
+            <ImagesContainer>
+              <img src={QRCode} alt="QR code" />
+              <SubImagesContainer>
+                <img src={GooglePlay} alt="QR code" />
+                <img src={Appstore} alt="QR code" />
+              </SubImagesContainer>
+            </ImagesContainer>
+            <SocialINetworkImagesContainer>
+              <Image src={Facebook} alt="Fcebook" />
+              <Image src={Twitter} alt="Twitter" />
+              <Image src={Instagram} alt="Instagram" />
+              <Image src={Linkedin} alt="Linkedin" />
+            </SocialINetworkImagesContainer>
+          </Section>
         </div>
-      </div>
+        <Copyright src={C} alt="Copyright" />
+      </FooterContainer>
     </>
   );
 };
