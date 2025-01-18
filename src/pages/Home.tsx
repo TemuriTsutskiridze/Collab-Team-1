@@ -1,4 +1,4 @@
-import Menu from "../components/Home/Menu";
+import Menu from "../layouts/Menu";
 import Timer from "../components/Home/Timer";
 import ArrowButton from "../components/Home/ArrowButtons";
 export default function Home() {
