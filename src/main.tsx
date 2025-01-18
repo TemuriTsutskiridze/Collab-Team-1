@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import { BrowserRouter,Routes,Route } from 'react-router'
 import Home from './pages/Home.tsx'
-import ErrorPage from './components/Home/ErrorPage.tsx'
+import ErrorPage from './components/ErrorPage.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -13,5 +13,5 @@ createRoot(document.getElementById('root')!).render(
            <Route path='*' element = {<ErrorPage />}></Route>
        </Routes>
      </BrowserRouter>
-  </StrictMode>,
+  </StrictMode>
 )
