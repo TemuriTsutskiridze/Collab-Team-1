@@ -43,12 +43,6 @@ const Sign: React.FC = () => {
             </FooterText>
           </FooterContainer>
         </MainSubContainer>
-        {/* <FooterContainer>
-          <FooterText>Already have account?</FooterText>
-          <FooterText style={{ fontWeight: 500, textDecoration: "underline" }}>
-            Log in
-          </FooterText>
-        </FooterContainer> */}
       </MainContainer>
     </>
   );
