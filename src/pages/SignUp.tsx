@@ -15,6 +15,9 @@ import {
 } from "../components/SignStyles";
 import { useNavigate } from "react-router";
 import { useState } from "react";
+import GlobalStyles from "../components/GlobalStyles";
+import HeaderLayout from "../layouts/HeaderLayout";
+import FooterLayout from "../layouts/FooterLayout";
 
 interface IUser {
   name: string | null;
@@ -54,6 +57,8 @@ const SignUp: React.FC = () => {
 
   return (
     <>
+      <GlobalStyles />
+      <HeaderLayout />
       <MainContainer>
         <div>
           <PackagePhoto src={sideImage} alt="Side image" />
@@ -109,6 +114,7 @@ const SignUp: React.FC = () => {
           </FooterContainer>
         </MainSubContainer>
       </MainContainer>
+      <FooterContainer />
     </>
   );
 };

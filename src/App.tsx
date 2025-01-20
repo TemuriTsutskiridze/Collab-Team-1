@@ -1,14 +1,14 @@
 import HeaderLayout from "./layouts/HeaderLayout";
 import GlobalStyles from "./components/GlobalStyles";
 import FooterLayout from "./layouts/FooterLayout";
-import Sign from "./pages/SignUp";
+import SignUp from "./pages/SignUp";
 
 function App() {
   return (
     <>
       <GlobalStyles />
       <HeaderLayout />
-      <Sign />
+      <SignUp />
       <FooterLayout />
     </>
   );
