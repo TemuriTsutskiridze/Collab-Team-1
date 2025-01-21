@@ -31,6 +31,7 @@ const SignUp: React.FC = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+  const [emailError, setEmailError] = useState<string | null>(null);
 
   const navigateSignIn = useNavigate();
 
@@ -54,7 +55,7 @@ const SignUp: React.FC = () => {
       console.log("Something went wrong.");
     }
   };
-
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   return (
     <>
       <GlobalStyles />
@@ -69,6 +70,10 @@ const SignUp: React.FC = () => {
           <Form
             onSubmit={(e) => {
               e.preventDefault();
+              if (!emailRegex.test(email)) {
+                setEmailError("Wrong email format.");
+                return;
+              }
               const newUser: IUser = {
                 name,
                 lastName: null,
@@ -84,18 +89,26 @@ const SignUp: React.FC = () => {
               placeholder="Name"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              required
             />
             <Input
               type="text"
               placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
+            {emailError && (
+              <p style={{ color: "red", fontSize: "1.2rem", marginTop: 0 }}>
+                {emailError}
+              </p>
+            )}
             <Input
               type="text"
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              required
             />
             <Create type="submit">Create Account</Create>
           </Form>

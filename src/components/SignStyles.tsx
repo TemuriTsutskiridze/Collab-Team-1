@@ -44,6 +44,10 @@ export const Input = styled.input`
   font-weight: normal;
   line-height: 1.5;
   color: #000;
+
+  &:focus {
+    outline: none;
+  }
 `;
 
 export const Form = styled.form`
