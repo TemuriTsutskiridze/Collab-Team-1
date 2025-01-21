@@ -7,6 +7,7 @@ import MainImage from "/main-image.png";
 import { useParams } from "react-router";
 import { useState } from "react";
 import { useEffect } from "react";
+import Heart from "/heart.png";
 
 interface IProduct {
   name: string | null;
@@ -61,7 +62,25 @@ const Product: React.FC = () => {
         <img src={MainImage} alt="Main Image" />
         <div>
           <h5>{product?.name}</h5>
-          <span>{product?.color}</span>
+          <span>({product?.reviewCount} Reviews | )</span>
+          <span>{product?.stock}</span>
+          <p>{product?.price}</p>
+          <p>{product?.description}</p>
+          <div>
+            <p>Colours: </p>
+            <div></div>
+          </div>
+          <div>
+            <div>-</div>
+            <div>2</div>
+            <div>+</div>
+            <div>
+              <button>Buy Now</button>
+              <div>
+                <img src={Heart} alt="Heart" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
