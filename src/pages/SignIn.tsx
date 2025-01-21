@@ -10,6 +10,7 @@ import {
   ButtonAndHelperText,
 } from "../components/SignStyles";
 import ProductImage from "/package.jpg";
+import { useState } from "react";
 
 interface IUser {
   name: string | null;
@@ -18,6 +19,10 @@ interface IUser {
   address: string | null;
   password: string | null;
 }
+
+const [email, setEmail] = useState<string>("");
+const [password, setPassword] = useState<string>("");
+const [emailError, setEmailError] = useState<string | null>(null);
 
 const userData = async (user: IUser) => {
   if (!user) return;
@@ -49,9 +54,33 @@ const SignIn: React.FC = () => {
         <div>
           <WhatToDo>Log in to Exclusive</WhatToDo>
           <AboutDetails>Enter your details below</AboutDetails>
-          <Form>
-            <Input type="email" placeholder="Email" />
-            <Input type="password" placeholder="Password" />
+          <Form
+            onSubmit={(e) => {
+              e.preventDefault();
+              if (!emailRegex.test(email)) {
+                setEmailError("Wrong email format.");
+              }
+            }}
+          >
+            <Input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            {emailError && (
+              <p style={{ color: "red", fontSize: "1.2rem", marginTop: 0 }}>
+                {emailError}
+              </p>
+            )}
+            <Input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
             <ButtonAndHelperText>
               <Submit type="submit" style={{ width: "14.3rem" }}>
                 Log In
