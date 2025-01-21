@@ -1,18 +1,33 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import { BrowserRouter,Routes,Route } from 'react-router'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router";
+import SignUp from "./pages/SignUp";
+import SignIn from "./pages/SignIn";
+import Product from "./pages/Product";
+import MainLayout from "./layouts/MainLayout";
+import Edit from "./pages/Edit";
 import Home from './pages/Home.tsx'
 import ErrorPage from './components/ErrorPage.tsx'
 import About from './components/About.tsx'
-createRoot(document.getElementById('root')!).render(
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <MainLayout />,
+    children: [
+      { path: "/", element: <Home />},
+      { path: "/About", element: <About /> },
+      { path: "/SignUp", element: <SignUp /> },
+      { path: "/SignIn", element: <SignIn /> },
+      { path: "/:Product", element: <Product /> },
+      { path: "/Edit", element: <Edit /> },
+      { path: "*", element: <ErrorPage /> }
+    ],
+  },
+]);
+
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
-     <BrowserRouter>
-       <Routes>
-           <Route path='/' element = {<Home />}></Route>
-           <Route path='*' element = {<ErrorPage />}></Route>
-           <Route path='/About' element = {<About />}></Route>
-       </Routes>
-     </BrowserRouter>
+    <RouterProvider router={router} />
   </StrictMode>
-)
+);
