@@ -16,6 +16,7 @@ export const MainSubContainer = styled.div`
 export const PackagePhoto = styled.img`
   width: 80.5rem;
   height: 78.1rem;
+  object-fit: contain;
 `;
 
 export const WhatToDo = styled.h4`
@@ -57,7 +58,7 @@ export const Form = styled.form`
   margin-top: 4.8rem;
 `;
 
-export const Create = styled.button`
+export const Submit = styled.button`
   width: 37.1rem;
   height: 5.6rem;
   display: flex;
@@ -100,4 +101,10 @@ export const FooterText = styled.span`
   line-height: 1.5;
   color: #000;
   opacity: 0.7;
+`;
+
+export const ButtonAndHelperText = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8.7rem;
 `;

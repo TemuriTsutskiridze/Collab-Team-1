@@ -7,7 +7,7 @@ import {
   Input,
   MainContainer,
   Form,
-  Create,
+  Submit,
   SignUpWithGoogle,
   FooterContainer,
   FooterText,
@@ -15,7 +15,6 @@ import {
 } from "../components/SignStyles";
 import { useNavigate } from "react-router";
 import { useState } from "react";
-import GlobalStyles from "../components/GlobalStyles";
 
 interface IUser {
   name: string | null;
@@ -106,7 +105,7 @@ const SignUp: React.FC = () => {
               onChange={(e) => setPassword(e.target.value)}
               required
             />
-            <Create type="submit">Create Account</Create>
+            <Submit type="submit">Create Account</Submit>
           </Form>
           <SignUpWithGoogle>
             <img src={Google} alt="Google icon" />
