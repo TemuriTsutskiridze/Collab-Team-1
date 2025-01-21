@@ -8,6 +8,11 @@ import { useParams } from "react-router";
 import { useState } from "react";
 import { useEffect } from "react";
 import Heart from "/heart.png";
+import {
+  MainContainer,
+  PicturesSection,
+  Name,
+} from "../components/ProductStyles";
 
 interface IProduct {
   name: string | null;
@@ -21,18 +26,20 @@ interface IProduct {
   rating: number;
   reviewCount: number;
   stock: number;
+  id: string;
 }
 
 const Product: React.FC = () => {
-  const { Product: productId } = useParams();
+  const { ProductId: productId } = useParams();
   const [product, setProduct] = useState<IProduct | null>(null);
 
   useEffect(() => {
     const productData = async () => {
-      if (!product) return;
+      if (!productId) return;
+      console.log(productId);
 
       try {
-        const response = await fetch(`http://localhost:3002/${productId}`, {
+        const response = await fetch(`http://localhost:3005/product`, {
           method: "GET",
           headers: { "Content-Type": "application/json" },
         });
@@ -41,7 +48,9 @@ const Product: React.FC = () => {
           throw new Error("No results.");
         }
         const data = await response.json();
-        setProduct(data);
+        const searched = data.find((d: IProduct) => productId === d.id);
+        console.log(data);
+        setProduct(searched);
       } catch (error) {
         console.log("Product has not found.");
       }
@@ -52,16 +61,16 @@ const Product: React.FC = () => {
 
   return (
     <>
-      <div>
-        <section>
+      <MainContainer>
+        <PicturesSection>
           <img src={FirstImage} alt="First Image" />
           <img src={secondImage} alt="Second Image" />
           <img src={thirdImage} alt="Third Image" />
           <img src={fourthImage} alt="Fourth Image" />
-        </section>
-        <img src={MainImage} alt="Main Image" />
+        </PicturesSection>
+        <img src={MainImage} alt="Main Image" style={{ marginLeft: "3rem" }} />
         <div>
-          <h5>{product?.name}</h5>
+          <Name>{product?.name}</Name>
           <span>({product?.reviewCount} Reviews | )</span>
           <span>{product?.stock}</span>
           <p>{product?.price}</p>
@@ -82,7 +91,7 @@ const Product: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
+      </MainContainer>
     </>
   );
 };

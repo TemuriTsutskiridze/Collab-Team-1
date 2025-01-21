@@ -11,7 +11,8 @@
         "image": "url",
         "rating": 4,
         "reviewCount": 130,
-        "stock": 133
+        "stock": 133,
+        "id": "1"
       },
       {
         "name": "Xbox Series X",
@@ -24,7 +25,8 @@
         "image": "url",
         "rating": 4.5,
         "reviewCount": 200,
-        "stock": 120
+        "stock": 120,
+        "id": "2"
       },
       {
         "name": "Nintendo Switch",
@@ -37,7 +39,8 @@
         "image": "url",
         "rating": 4.7,
         "reviewCount": 300,
-        "stock": 150
+        "stock": 150,
+        "id": "3"
       },
       {
         "name": "MacBook Pro 13",
@@ -50,7 +53,8 @@
         "image": "url",
         "rating": 4.8,
         "reviewCount": 500,
-        "stock": 80
+        "stock": 80,
+        "id": "4"
       },
       {
         "name": "iPhone 14",
@@ -63,7 +67,8 @@
         "image": "url",
         "rating": 4.5,
         "reviewCount": 1500,
-        "stock": 200
+        "stock": 200,
+        "id": "5"
       },
       {
         "name": "Samsung Galaxy S22",
@@ -76,7 +81,8 @@
         "image": "url",
         "rating": 4.6,
         "reviewCount": 800,
-        "stock": 100
+        "stock": 100,
+        "id": "6"
       },
       {
         "name": "Dell XPS 13",
@@ -89,7 +95,8 @@
         "image": "url",
         "rating": 4.7,
         "reviewCount": 450,
-        "stock": 70
+        "stock": 70,
+        "id": "7"
       },
       {
         "name": "Sony WH-1000XM5",
@@ -102,7 +109,8 @@
         "image": "url",
         "rating": 4.8,
         "reviewCount": 1200,
-        "stock": 90
+        "stock": 90,
+        "id": "8"
       },
       {
         "name": "Apple AirPods Pro 2",
@@ -115,7 +123,8 @@
         "image": "url",
         "rating": 4.7,
         "reviewCount": 1000,
-        "stock": 150
+        "stock": 150,
+        "id": "9"
       },
       {
         "name": "GoPro HERO10",
@@ -128,7 +137,8 @@
         "image": "url",
         "rating": 4.7,
         "reviewCount": 700,
-        "stock": 120
+        "stock": 120,
+        "id": "10"
       },
       {
         "name": "Canon EOS R5",
@@ -141,7 +151,8 @@
         "image": "url",
         "rating": 4.9,
         "reviewCount": 300,
-        "stock": 40
+        "stock": 40,
+        "id": "11"
       },
       {
         "name": "Apple Watch Series 8",
@@ -154,7 +165,8 @@
         "image": "url",
         "rating": 4.7,
         "reviewCount": 1100,
-        "stock": 130
+        "stock": 130,
+        "id": "12"
       }
     ]
   }

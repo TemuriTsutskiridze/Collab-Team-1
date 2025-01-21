@@ -36,7 +36,7 @@ const SignUp: React.FC = () => {
     if (!newUser) return;
 
     try {
-      const response = await fetch(`http://localhost:3001/${newUser.name}`, {
+      const response = await fetch(`http://localhost:3001/user`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newUser),

@@ -1,74 +1,82 @@
-{ 
-    "user": [
-            {
-              "name": "John",
-              "lastName": "Doe",
-              "email": "john.doe@example.com",
-              "address": "123 Maple Street, Springfield",
-              "password": "password123"
-            },
-            {
-              "name": "Jane",
-              "lastName": "Smith",
-              "email": "jane.smith@example.com",
-              "address": "456 Oak Avenue, Metropolis",
-              "password": "securepass456"
-            },
-            {
-              "name": "Alice",
-              "lastName": "Johnson",
-              "email": "alice.johnson@example.com",
-              "address": "789 Pine Lane, Riverdale",
-              "password": "mypassword789"
-            },
-            {
-              "name": "Bob",
-              "lastName": "Brown",
-              "email": "bob.brown@example.com",
-              "address": "321 Elm Street, Gotham",
-              "password": "bobsecure321"
-            },
-            {
-              "name": "Emily",
-              "lastName": "Davis",
-              "email": "emily.davis@example.com",
-              "address": "654 Cedar Road, Star City",
-              "password": "password654"
-            },
-            {
-              "name": "Michael",
-              "lastName": "Wilson",
-              "email": "michael.wilson@example.com",
-              "address": "987 Birch Boulevard, Central City",
-              "password": "michael987"
-            },
-            {
-              "name": "Sophia",
-              "lastName": "Taylor",
-              "email": "sophia.taylor@example.com",
-              "address": "135 Willow Drive, Coast City",
-              "password": "sophia135"
-            },
-            {
-              "name": "David",
-              "lastName": "Moore",
-              "email": "david.moore@example.com",
-              "address": "246 Palm Street, Smallville",
-              "password": "david246"
-            },
-            {
-              "name": "Olivia",
-              "lastName": "Anderson",
-              "email": "olivia.anderson@example.com",
-              "address": "579 Ash Court, Emerald City",
-              "password": "olivia579"
-            },
-            {
-              "name": "Chris",
-              "lastName": "Thomas",
-              "email": "chris.thomas@example.com",
-              "address": "468 Redwood Lane, Hill Valley",
-              "password": "chris468"
-            }           
-    ]
+{
+  "user": [
+    {
+      "name": "John",
+      "lastName": "Doe",
+      "email": "john.doe@example.com",
+      "address": "123 Maple Street, Springfield",
+      "password": "password123"
+    },
+    {
+      "name": "Jane",
+      "lastName": "Smith",
+      "email": "jane.smith@example.com",
+      "address": "456 Oak Avenue, Metropolis",
+      "password": "securepass456"
+    },
+    {
+      "name": "Alice",
+      "lastName": "Johnson",
+      "email": "alice.johnson@example.com",
+      "address": "789 Pine Lane, Riverdale",
+      "password": "mypassword789"
+    },
+    {
+      "name": "Bob",
+      "lastName": "Brown",
+      "email": "bob.brown@example.com",
+      "address": "321 Elm Street, Gotham",
+      "password": "bobsecure321"
+    },
+    {
+      "name": "Emily",
+      "lastName": "Davis",
+      "email": "emily.davis@example.com",
+      "address": "654 Cedar Road, Star City",
+      "password": "password654"
+    },
+    {
+      "name": "Michael",
+      "lastName": "Wilson",
+      "email": "michael.wilson@example.com",
+      "address": "987 Birch Boulevard, Central City",
+      "password": "michael987"
+    },
+    {
+      "name": "Sophia",
+      "lastName": "Taylor",
+      "email": "sophia.taylor@example.com",
+      "address": "135 Willow Drive, Coast City",
+      "password": "sophia135"
+    },
+    {
+      "name": "David",
+      "lastName": "Moore",
+      "email": "david.moore@example.com",
+      "address": "246 Palm Street, Smallville",
+      "password": "david246"
+    },
+    {
+      "name": "Olivia",
+      "lastName": "Anderson",
+      "email": "olivia.anderson@example.com",
+      "address": "579 Ash Court, Emerald City",
+      "password": "olivia579"
+    },
+    {
+      "name": "Chris",
+      "lastName": "Thomas",
+      "email": "chris.thomas@example.com",
+      "address": "468 Redwood Lane, Hill Valley",
+      "password": "chris468"
+    },
+    {
+      "id": "5bac",
+      "name": "jkks",
+      "lastName": null,
+      "email": "giga.klibadze.1@btu.edu.ge",
+      "address": null,
+      "password": "saljskajskjas"
+    }
+  ]
 }
