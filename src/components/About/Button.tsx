@@ -1,4 +1,3 @@
-import { useState } from "react";
 import ButtonsData from "./ButtonsData";
 export default function Button({
   isClicked,
@@ -6,7 +5,7 @@ export default function Button({
   setButtonsObject,
 }: {
   isClicked: boolean;
-  id:number,
+  id: number;
   setButtonsObject: React.Dispatch<
     React.SetStateAction<
       {
@@ -22,16 +21,16 @@ export default function Button({
         className={`w-[10px] h-[10px] border border-[#D3D3D3]  rounded-[50%] cursor-pointer ${
           isClicked ? "bg-[#DB4444]" : "bg-[#D3D3D3]"
         }`}
-        onClick={()=>{
-          const updatedData = ButtonsData.map((dataObj)=>{
-            if(id === dataObj.id){
+        onClick={() => {
+          const updatedData = ButtonsData.map((dataObj) => {
+            if (id === dataObj.id) {
               dataObj.isClicked = true;
-            }else{
+            } else {
               dataObj.isClicked = false;
             }
             return dataObj;
-          })
-          setButtonsObject([...updatedData])
+          });
+          setButtonsObject([...updatedData]);
         }}
       ></div>
     </div>
