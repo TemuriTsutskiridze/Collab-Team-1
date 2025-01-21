@@ -6,9 +6,11 @@ import FounderPage from "./About/FounderPage";
 import Button from "./About/Button";
 import ButtonsData from "./About/ButtonsData";
 import { useState } from "react";
+import { ServiceCardData } from "./About/ServiceCardData";
+import ServiceCard from "./About/ServiceCard";
 export default function About() {
-  const [ButtonsObjects,SetButtonsObject] = useState([...ButtonsData]);
-  console.log(ButtonsObjects)
+  const [ButtonsObjects, SetButtonsObject] = useState([...ButtonsData]);
+  console.log(ButtonsObjects);
   return (
     <>
       <GoBack componentName={"AboutPage"} />
@@ -60,8 +62,28 @@ export default function About() {
       </div>
       <div className="w-[100%] mt-[40px] flex justify-center">
         <div className="w-[10%] flex justify-between">
-          {ButtonsObjects.map((ButtonsObj)=>{
-            return <Button key={ButtonsObj.id} id = {ButtonsObj.id} isClicked = {ButtonsObj.isClicked} setButtonsObject = {SetButtonsObject} ></Button>
+          {ButtonsObjects.map((ButtonsObj) => {
+            return (
+              <Button
+                key={ButtonsObj.id}
+                id={ButtonsObj.id}
+                isClicked={ButtonsObj.isClicked}
+                setButtonsObject={SetButtonsObject}
+              ></Button>
+            );
+          })}
+        </div>
+      </div>
+      <div className="flex justify-center">
+        <div className="flex flex-col justify-between items-center w-[50%] mt-[50px] md:flex-row">
+          {ServiceCardData.map((dataObj) => {
+            return (
+              <ServiceCard
+                imagePath={dataObj.imagePath}
+                title={dataObj.title}
+                text={dataObj.text}
+              ></ServiceCard>
+            );
           })}
         </div>
       </div>
