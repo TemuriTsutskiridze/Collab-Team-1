@@ -49,10 +49,12 @@ const SignUp: React.FC = () => {
       // const data = await response.json();
       navigateSignIn("/SingIn");
     } catch (error) {
-      console.log("Something went wrong.");
+      console.log("User already exist.");
     }
   };
+
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
   return (
     <>
       <MainContainer>
