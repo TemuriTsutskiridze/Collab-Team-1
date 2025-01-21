@@ -11,6 +11,7 @@ import {
 } from "../components/SignStyles";
 import ProductImage from "/package.jpg";
 import { useState } from "react";
+import { useNavigate } from "react-router";
 
 interface IUser {
   name: string | null;
@@ -20,31 +21,34 @@ interface IUser {
   password: string | null;
 }
 
-const [email, setEmail] = useState<string>("");
-const [password, setPassword] = useState<string>("");
-const [emailError, setEmailError] = useState<string | null>(null);
-
-const userData = async (user: IUser) => {
-  if (!user) return;
-
-  try {
-    const response = await fetch(`http://localhost:3001/${user.email}`, {
-      method: "GET",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(user),
-    });
-
-    if (!response.ok) {
-      throw new Error("No results.");
-    }
-  } catch (error) {
-    console.log("Not registered.");
-  }
-};
-
-const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
 const SignIn: React.FC = () => {
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [emailError, setEmailError] = useState<string | null>(null);
+
+  const navigateUserPage = useNavigate();
+
+  const userData = async (user: IUser) => {
+    if (!user) return;
+
+    try {
+      const response = await fetch(`http://localhost:3001/${user.email}`, {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+      });
+
+      if (!response.ok) {
+        throw new Error("No results.");
+      }
+
+      navigateUserPage("/WithAccount");
+    } catch (error) {
+      console.log("Not registered.");
+    }
+  };
+
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
   return (
     <>
       <MainContainer>
@@ -59,11 +63,20 @@ const SignIn: React.FC = () => {
               e.preventDefault();
               if (!emailRegex.test(email)) {
                 setEmailError("Wrong email format.");
+                return;
               }
+              const user: IUser = {
+                name: null,
+                lastName: null,
+                email,
+                address: null,
+                password,
+              };
+              userData(user);
             }}
           >
             <Input
-              type="email"
+              type="text"
               placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
