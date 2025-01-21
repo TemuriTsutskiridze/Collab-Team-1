@@ -16,8 +16,6 @@ import {
 import { useNavigate } from "react-router";
 import { useState } from "react";
 import GlobalStyles from "../components/GlobalStyles";
-import HeaderLayout from "../layouts/HeaderLayout";
-import FooterLayout from "../layouts/FooterLayout";
 
 interface IUser {
   name: string | null;
@@ -58,8 +56,6 @@ const SignUp: React.FC = () => {
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   return (
     <>
-      <GlobalStyles />
-      <HeaderLayout />
       <MainContainer>
         <div>
           <PackagePhoto src={sideImage} alt="Side image" />
