@@ -11,7 +11,13 @@ interface IUser {
 
 const Edit: React.FC = () => {
   const { userId } = useParams();
-  const [user, setUser] = useState<IUser | null>(null);
+  const [user, setUser] = useState<IUser>({
+    name: "",
+    lastName: "",
+    email: "",
+    address: "",
+    password: "",
+  });
   const navigate = useNavigate();
 
   useEffect(() => {
